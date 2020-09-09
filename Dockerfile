@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y sed gcc zlib1g-dev g++ tree
 RUN git clone https://github.com/dolphinnext/tools /usr/local/bin/dolphin-tools
 RUN git clone https://github.com/jrw24/G418_readthrough.git /usr/local/bin/G418_readthrough
 RUN sed -i '#!/usr/bin/env python' /usr/local/bin/G418_readthrough/riboseq/densebuilder_main.py
+RUN sed -i -e 's/if not chrom in validChrs/#if not chrom in validChrs/g' /usr/local/bin/G418_readthrough/riboseq/densebuilder_main.py
 ENV PATH /opt/conda/envs/dolphinnext-riboseq-1.0/bin:/usr/local/bin/dolphin-tools/:/usr/local/bin/G418_readthrough/riboseq:/usr/local/bin/G418_readthrough/utils:/usr/local/bin/G418_readthrough/RNAseq:$PATH
 
 RUN mv /usr/local/bin/G418_readthrough/GFF /opt/conda/envs/dolphinnext-riboseq-1.0/lib/python2.7/site-packages/.

@@ -84,6 +84,7 @@ List of genomes that are supported are:
 
 * Human
   * `--genome_build human_hg38_gencode_v30`
+  * `--genome_build mouse_mm10_gencode_m25`
 
 Note: For new genome requests, please send e-mail to UMMS-Biocore(biocore@umassmed.edu).
 

@@ -32,7 +32,14 @@ Yukselen, O., Turkyilmaz, O., Ozturk, A.R. et al. DolphinNext: a distributed dat
 
 * **Reads**: Specify the location of your input FastQ file. <a class="link-underline" href="https://dolphinnext.readthedocs.io/en/latest/dolphinNext/quick.html#adding-files" target="_blank">Need Help?</a>
 * **Adapter Sequence**: Please enter the adapter sequence(s) in the settings of `run_Adaper_Removal`.
-
+* Settings of `run_riboseq_workflow`: 
+	- `sample_order` (optional): You can overwrite the default order of the samples in the figures by entering a new set of 'comma-separated' name of the samples. e.g. `control_rep1, control_rep2`
+	- `amino_acid_list` (required): Please enter comma-separated list of amino acids that are going to be highlighted in figure 2S3B.
+	- `color_code_list` (optional): 
+	- `control_group_name`  (required): Control group name for figures  e.g. `control`
+	- `control_group` (required): Comma-separated list of sample names e.g. `control_rep1, control_rep2`
+	- `treatment_group_name`  (required): Treatment group name for figures (e.g. for first group: `treatment1` and for second group click add button and enter:`treatment2`)
+	- `treatment_group` (required): Comma-separated list of samples (e.g. for first group: `treat1.rep1, treat1.rep2` and for second group enter: `treat2.rep1, treat2.rep2`)
 
 ##### Program Versions:
   - fastqc=0.11.8
@@ -59,7 +66,6 @@ Yukselen, O., Turkyilmaz, O., Ozturk, A.R. et al. DolphinNext: a distributed dat
   - r-scales=0.5.0
   - xtail=1.1.5
 
-
 ##### Run through DolphinNext User Interface:
 
 To start using the dolphinnext/ribosome-profiling pipeline please go to <a class="link-underline" href="https://dolphinnext.umassmed.edu/index.php?np=1&id=688" target="_blank">DolphinNext Web page</a> and click run button.
@@ -67,4 +73,3 @@ To start using the dolphinnext/ribosome-profiling pipeline please go to <a class
 ##### Run through Command Line:
 
 To install and start using the dolphinnext/ribosome-profiling pipeline by using command line, please follow these steps: <a class="link-underline" href="https://github.com/dolphinnext/ribosome-profiling/blob/1.0/docs/local.md" target="_blank">Installation</a> .
-
